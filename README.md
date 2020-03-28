@@ -1,11 +1,11 @@
 # Zabbix Custom Item Discovery
-Bash script for interpreting delimeter separated text file to JSON suitable for Zabbix
+Bash script for interpreting delimiter separated text file to JSON suitable for Zabbix
 
 # My case
 Once upon a time I faced a need to constantly check status of nearly 50 remote services using their IP and PORT and get notified if one them is down
 
 # How to use
-1. Create file with your data (if you have used other delimeter instead of " ", also don't forget to change it for IFS in script)
+1. Create file with your data (if you have used other delimiter instead of " ", also don't forget to change it for IFS in script)
 1. Set text file as INPUT
 2. Set OUTPUT filename
 3.  Add UserParameter to your zabbix_agentd.conf
