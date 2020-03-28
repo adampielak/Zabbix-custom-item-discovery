@@ -9,13 +9,13 @@ exec > $OUTPUT
 echo "{
         \"data\":[
 "
-while IFS=" " read -r V1 V2 V3
+while IFS=" " read -r F1 F2 F3
 do
         LINE_CURRENT=$(($LINE_CURRENT + 1))
         if [ $LINE_CURRENT -lt $LINE_TOTAL ] ; then
-                echo -e "       { \"{#HOSTNAME}\":\""$V1"\", \"{#IP}\":\""$V2"\", \"{#PORT}\":\""$V3"\" },"
+                echo -e "       { \"{#HOSTNAME}\":\""$F1"\", \"{#IP}\":\""$F2"\", \"{#PORT}\":\""$F3"\" },"
         else
-                echo -e "       { \"{#HOSTNAME}\":\""$V1"\", \"{#IP}\":\""$V2"\", \"{#PORT}\":\""$V3"\" }"
+                echo -e "       { \"{#HOSTNAME}\":\""$F1"\", \"{#IP}\":\""$F2"\", \"{#PORT}\":\""$F3"\" }"
         fi
 done < $INPUT
 echo "
